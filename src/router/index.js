@@ -5,7 +5,7 @@ import SignUp from "../views/SignUp.vue";
 import DashBoard from "../views/DashBoard.vue";
 import User from "../views/user/index.vue";
 import Notice from "../views/notice/index.vue";
-
+import Record from '../views/record/index.vue';
 import { getToken } from "../utils/auth"; // 访问缓存的用户名
 
 const routes = [
@@ -36,6 +36,12 @@ const routes = [
         path: "user",
         name: "User",
         component: User,
+        meta: { requiresAuth: true },
+      },
+      {
+        path: "record",
+        name: "Record",
+        component: Record,
         meta: { requiresAuth: true },
       },
     ],

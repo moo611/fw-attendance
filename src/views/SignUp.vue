@@ -51,7 +51,7 @@ const form = reactive({
 });
 
 
-const roleOptions = [{ value: '0', label: '管理员' }, { value: '1', label: '学生' }]
+const roleOptions = [{ value: '0', label: '管理员' }, { value: '1', label: '员工' }]
 const sexOptions = [{value:'0',label:'男'},{value:'1',label:'女'}]
 
 const router = useRouter();

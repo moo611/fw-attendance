@@ -2,7 +2,7 @@
   <div>
     <div class="header">
       <el-button v-show="false" type="primary" @click="getNoticeList">查询</el-button>
-      <el-button @click="handleAdd" type="primary" class="btn-add">新增</el-button>
+      <el-button v-show="getUser().role == '0'" @click="handleAdd" type="primary" class="btn-add">新增</el-button>
     </div>
     <el-table class="my-table" :data="state.data.list">
      
@@ -11,7 +11,7 @@
       <el-table-column prop="createTime" label="创建时间" />
 
 
-      <el-table-column label="操作" :v-if="getUser().role == '0'">
+      <el-table-column label="操作" v-if="getUser().role == '0'">
         <template #default="scope">
           <el-button type="primary" @click="handleEdit(scope.$index, scope.row)">
             编辑

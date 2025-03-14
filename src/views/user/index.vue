@@ -107,7 +107,7 @@ const roleOptions = [
   },
   {
     value: '1',
-    label: '学生',
+    label: '员工',
   },]
 
 
@@ -116,7 +116,7 @@ const roleFormatter = (row, column, cellValue) => {
   if (cellValue == '0') {
     return '管理员'
   } else if (cellValue == '1') {
-    return '学生'
+    return '员工'
   }
   return ''
 }

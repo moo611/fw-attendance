@@ -70,11 +70,12 @@ const getInfo = () => {
     if (user.role == '0') {
 
       menus.push({ label: '公告管理', value: '/dashboard/notice' })
+      menus.push({label: '打卡记录', value: '/dashboard/record'})
       menus.push({ label: '用户管理', value: '/dashboard/user' })
     } else {
-
+      
       menus.push({ label: '公告列表', value: '/dashboard/notice' })
-
+      menus.push({label: '打卡', value: '/dashboard/record'})
     }
     menuList.value = menus
 
