@@ -76,6 +76,7 @@ const getInfo = () => {
       
       menus.push({ label: '公告列表', value: '/dashboard/notice' })
       menus.push({label: '打卡', value: '/dashboard/record'})
+      menus.push({label: '设置', value: '/dashboard/setting'})
     }
     menuList.value = menus
 

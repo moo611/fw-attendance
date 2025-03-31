@@ -6,6 +6,7 @@ import DashBoard from "../views/DashBoard.vue";
 import User from "../views/user/index.vue";
 import Notice from "../views/notice/index.vue";
 import Record from '../views/record/index.vue';
+import Setting from '../views/setting/index.vue'
 import { getToken } from "../utils/auth"; // 访问缓存的用户名
 
 const routes = [
@@ -36,6 +37,12 @@ const routes = [
         path: "user",
         name: "User",
         component: User,
+        meta: { requiresAuth: true },
+      },
+      {
+        path: "setting",
+        name: "Setting",
+        component: Setting,
         meta: { requiresAuth: true },
       },
       {
