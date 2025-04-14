@@ -4,7 +4,7 @@
       <h1>考勤打卡系统</h1>
     </div>
     <div>
-      <img src="../assets/logo.png"/>
+      <img src="../assets/registry.png"  style="width: 80px;height: 80px;"/>
     </div>
     <el-form class="form" :model="form" label-width="auto" style="width: 600px">
       <el-form-item label="用户名">

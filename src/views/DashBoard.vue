@@ -1,7 +1,8 @@
 <template>
   <div class="main">
     <div class="header">
-      <h3 style="margin-left: 30px;">考勤打卡系统</h3>
+      <img src="../assets/registry.png" style="width: 60px;height: 60px;margin-left: 30px;"/>
+      <h3 style="margin-left: 10px;">考勤打卡系统</h3>
       <div class="btn-logout">
         <el-popover v-model:visible="popoverVisible" placement="bottom" width="200">
           <el-button type="text" @click="logout">退出登录</el-button>
@@ -20,7 +21,7 @@
     <div class="content">
       <div class="sidebar">
 
-        <el-menu :default-active="activeMenu" router class="custom-menu">
+        <el-menu active-text-color="#ffd04b" background-color="#545c64" text-color="#fff" :default-active="activeMenu" router class="custom-menu">
 
           <el-menu-item v-for="item, index in menuList" :index="item.value">
             <span>{{ item.label }}</span>
@@ -88,18 +89,13 @@ getInfo()
 </script>
 <style lang="css" scoped>
 /* 使用 ::v-deep 来覆盖 el-menu 的样式 */
-::v-deep .custom-menu {
-  font-size: 16px;
-  /* 设置菜单的字体大小 */
-  font-weight: 600;
-  background-color: transparent;
+.custom-menu {
+  height: 100%;
 }
 
-::v-deep .custom-menu .el-menu-item {
+::v-deep .custom-menu .el-menu-item{
   font-size: 16px;
-  /* 覆盖子元素 el-menu-item 的字体大小 */
   font-weight: 600;
-  background-color: transparent;
 }
 
 .main {
