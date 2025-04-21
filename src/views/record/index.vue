@@ -86,9 +86,7 @@ const queryParams = reactive({
   createBy: '',
   checkOutTime: ''
 })
-if (getUser().role == '0') {
-  queryParams.checkOutTime = getToday()
-}
+
 
 const state = reactive({
   data: {},
@@ -102,9 +100,10 @@ const state = reactive({
 const getRecordList = () => {
   if (getUser().role == '0') {
     queryParams.createBy = ''
-
+    queryParams.checkOutTime = getToday()
   } else {
     queryParams.createBy = getUser().username
+    queryParams.checkOutTime = ''
   }
   axios.post('record/list', queryParams).then(res => {
 
@@ -210,6 +209,7 @@ function blobToBase64(blob) {
 
 const clearData = () => {
   stopCamera()
+  noClick.value = true
 }
 // 停止摄像头
 const stopCamera = () => {
